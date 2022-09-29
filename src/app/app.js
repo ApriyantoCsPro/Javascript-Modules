@@ -1,8 +1,7 @@
-const alertService = new AlertService();
-const calculatorService = new CalculatorService();
-const jokesService = new JokesService();
+import cekInputValid from './utils/cekInputValid.js';
+import parseInput from './utils/parseInput.js';
 
-const run = (alertService, calculatorService, jokesService) => {
+export default function run(alertService, calculatorService, jokesService) {
   alertService.sembunyikanError();
 
   calculatorService.onClick(() => {
@@ -25,6 +24,5 @@ const run = (alertService, calculatorService, jokesService) => {
         jokesService.setModal(data.data);
       });
   });
-};
+}
 
-run(alertService, calculatorService, jokesService);

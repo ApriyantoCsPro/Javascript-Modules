@@ -1,4 +1,6 @@
-class AlertService {
+import cekInputValid  from './utils/cekInputValid.js'
+
+export default class AlertService {
   constructor() {
     this.error = document.querySelector('#error');
   }
